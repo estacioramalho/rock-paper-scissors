@@ -24,6 +24,7 @@ main{
     padding: 100px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 
 }
 .center{
@@ -31,7 +32,7 @@ main{
     background-color: #325685;
     height: 400px;
     width: 800px;
-    border-radius: 50px;
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
 
@@ -56,9 +57,13 @@ main{
 
 .humanemoji{
     background-color:#1c304a;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
 }
 
 .aishowcase{
@@ -69,11 +74,39 @@ main{
 
 .aiemoji{
     background-color:#1c304a;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius:25px;
 }
 
 p{
     margin: 10px;
+}
+
+.leftcontainer{
+    height: 400px;
+    width: 100px;
+}
+.rightcontainer{
+    background-color: #325685;
+    height: 400px;
+    width: 105px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.rockcontainer, .papercontainer, .scissorscontainer{
+    width: 80px;
+    height: 80px;
+    background-color:#1c304a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
 }
