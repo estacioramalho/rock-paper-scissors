@@ -6,30 +6,42 @@ const paperButton = document.querySelector("#paperbutton")
 const scissorsButton = document.querySelector("#scissorsbutton")
 
 const humanemoji = document.querySelector("#humanemoji")
-const aiemoji = document.querySelector("#aiemoji")
 
 
 
 function rockClick(){
-    console.log("Rock Clicked");
-    humanemoji.innerHTML = "🤜";
+    humanemoji.textContent = "🤜";
     aiPlays();
 }
 
 function paperClick(){
-    console.log("Paper Clicked");
-    humanemoji.innerHTML = "🖐️";
+    humanemoji.textContent = "🖐️";
     aiPlays();
 }
 
 function scissorsClick(){
-    console.log("Scissors Clicked");
-    humanemoji.innerHTML = "✌️";
+    humanemoji.textContent = "✌️";
     aiPlays();
 }
 
 function aiPlays(){
-    console.log("Ai Plays");
+    const options = ["🤜", "🖐️", "✌️"]
+    const randomIndex = Math.floor(Math.random() * options.length);
+    const aiemoji = document.getElementById("aiemoji");
+    aiemoji.textContent = options[randomIndex];
+    if (humanemoji.textContent === "🤜" && aiemoji.textContent === "✌️") {
+        humanvictories++;
+      } else if (humanemoji.textContent === "🖐️" && aiemoji.textContent === "🤜") {
+        humanvictories++;
+      } else if (humanemoji.textContent === "✌️" && aiemoji.textContent === "🖐️") {
+        humanvictories++;
+      } else if (humanemoji.textContent === aiemoji.textContent) {
+        // do nothing, it's a tie
+      } else {
+        aivictories++;
+      }
+    humanscore.textContent = ("Victories: " + humanvictories);
+    aiscore.textContent = ("Victories: " + aivictories);
 }
 
 
