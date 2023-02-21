@@ -42,6 +42,21 @@ function aiPlays(){
       }
     humanscore.textContent = ("Victories: " + humanvictories);
     aiscore.textContent = ("Victories: " + aivictories);
+    scoreCheck();
+}
+
+function scoreCheck(){
+  if (humanvictories === 3) {
+    humanscore.textContent = ("Winner!");
+    aiscore.textContent = ("Loser!");
+    humanvictories = 0;
+    aivictories = 0;
+  } else if (aivictories === 3) {
+    humanscore.textContent = ("Loser!");
+    aiscore.textContent = ("Winner!");
+    humanvictories = 0;
+    aivictories = 0;
+  }
 }
 
 
